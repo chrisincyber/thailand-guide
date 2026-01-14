@@ -22,12 +22,13 @@
         }
 
         .page {
-            width: 210mm;
-            height: 297mm;
+            width: 100%;
+            max-width: 210mm;
+            min-height: 297mm;
             margin: 0 auto;
             background: #FAFAFA;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         /* Hero Section */
@@ -271,6 +272,85 @@
             justify-content: center;
             font-family: 'JetBrains Mono', monospace;
             border: 3px solid #FFE500;
+        }
+
+        /* Mobile Responsive */
+        @media screen and (max-width: 768px) {
+            .page {
+                min-height: auto;
+            }
+
+            .hero {
+                height: auto;
+                padding: 30px 20px;
+            }
+
+            .hero-flag {
+                font-size: 80px;
+                top: 20px;
+                right: 20px;
+            }
+
+            .hero-title {
+                font-size: 48px;
+                letter-spacing: -2px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .content {
+                padding: 25px 15px;
+            }
+
+            .grid {
+                gap: 15px;
+            }
+
+            .card-small {
+                grid-column: span 12;
+            }
+
+            .card {
+                padding: 20px;
+                box-shadow: 5px 5px 0 #000;
+            }
+
+            .card-number {
+                top: -10px;
+                right: -10px;
+                width: 28px;
+                height: 28px;
+                font-size: 12px;
+            }
+
+            .language-box {
+                padding: 20px;
+                box-shadow: 8px 8px 0 #FF3366;
+            }
+
+            .phrases {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .phrase {
+                padding: 12px;
+            }
+
+            .phrase-thai {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
+            .deco-line {
+                display: none;
+            }
         }
 
         @media print {
